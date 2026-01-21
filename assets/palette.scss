@@ -1,0 +1,47 @@
+/* Southern Sole Reflexology - https://coolors.co/fdeedc-b9c8c9-786c5e-c0846d-000000 */
+
+/* CSS HEX */
+--antique-white: #fdeedcff;
+--ash-grey: #b9c8c9ff;
+--dim-grey: #786c5eff;
+--cinnamon-wood: #c0846dff;
+--black: #000000ff;
+
+/* CSS HSL */
+--antique-white: hsla(33, 89%, 93%, 1);
+--ash-grey: hsla(184, 13%, 76%, 1);
+--dim-grey: hsla(32, 12%, 42%, 1);
+--cinnamon-wood: hsla(17, 40%, 59%, 1);
+--black: hsla(0, 0%, 0%, 1);
+
+/* SCSS HEX */
+$antique-white: #fdeedcff;
+$ash-grey: #b9c8c9ff;
+$dim-grey: #786c5eff;
+$cinnamon-wood: #c0846dff;
+$black: #000000ff;
+
+/* SCSS HSL */
+$antique-white: hsla(33, 89%, 93%, 1);
+$ash-grey: hsla(184, 13%, 76%, 1);
+$dim-grey: hsla(32, 12%, 42%, 1);
+$cinnamon-wood: hsla(17, 40%, 59%, 1);
+$black: hsla(0, 0%, 0%, 1);
+
+/* SCSS RGB */
+$antique-white: rgba(253, 238, 220, 1);
+$ash-grey: rgba(185, 200, 201, 1);
+$dim-grey: rgba(120, 108, 94, 1);
+$cinnamon-wood: rgba(192, 132, 109, 1);
+$black: rgba(0, 0, 0, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-right: linear-gradient(90deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-bottom: linear-gradient(180deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-left: linear-gradient(270deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-top-right: linear-gradient(45deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-bottom-right: linear-gradient(135deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-top-left: linear-gradient(225deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-bottom-left: linear-gradient(315deg, #fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);
+$gradient-radial: radial-gradient(#fdeedcff, #b9c8c9ff, #786c5eff, #c0846dff, #000000ff);

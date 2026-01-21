@@ -1,0 +1,109 @@
+/* Background: White (#ffffff) - for page background
+Primary: Dark gray (#333333) - for main text and primary elements
+Secondary: Medium gray (#666666) - for secondary text and elements
+Accent-1: Light gray (#999999) - for accents and borders
+Accent-2: Very light gray (#cccccc) - for lighter accents and hover states */
+
+/* Universal Color Palette */
+:root {
+  --color-background: #ffffff;
+  --color-primary: #222222;
+  --color-secondary: #555555;
+  --color-accent-1: #888888;
+  --color-accent-2: #cccccc;
+}
+
+/* Base */
+html,
+body {
+  height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gravitas One", sans-serif;
+  font-weight: 400;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--color-accent-1);
+  text-decoration: underline;
+}
+
+/* Navbar (override Bootstrap light) */
+.navbar {
+  background-color: var(--color-accent-2) !important;
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: var(--color-primary) !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--color-accent-1) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-background);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+/* Hero banner defaults (keeps existing gradient usage) */
+.hero-banner {
+  color: var(--color-background);
+}
+
+/* Accordion / FAQ */
+.accordion-button {
+  color: var(--color-primary);
+  background-color: transparent;
+}
+.accordion-button:hover,
+.accordion-button:focus {
+  background-color: var(--color-accent-1);
+  color: var(--color-primary);
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--color-accent-2);
+  color: var(--color-primary);
+}
+
+/* Cards & images */
+.card {
+  border-color: var(--color-accent-1);
+}
+.card .card-title {
+  color: var(--color-primary);
+}
+
+/* Utility helpers */
+.border-accent {
+  border: 1px solid var(--color-accent-1) !important;
+}
+.bg-accent-2 {
+  background-color: var(--color-accent-2) !important;
+}
+.text-primary {
+  color: var(--color-primary) !important;
+}

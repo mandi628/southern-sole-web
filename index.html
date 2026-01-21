@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Site #1 - Home</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Basic Site #1</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section
+      class="hero-banner py-5"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-background);
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Welcome to Basic Site #1</h1>
+        <p class="lead mb-4">Your professional web presence starts here</p>
+        <a
+          class="btn btn-light btn-lg"
+          data-bs-toggle="modal"
+          data-bs-target="#heroContactModal"
+          >Get Started</a
+        >
+      </div>
+    </section>
+
+    <!-- Hero Contact Modal -->
+    <div
+      class="modal fade"
+      id="heroContactModal"
+      tabindex="-1"
+      aria-labelledby="heroContactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="heroContactModalLabel">Get Started</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Options View -->
+          <div id="modalOptions" class="modal-body text-center">
+            <h6 class="mb-4">Choose how you'd like to connect:</h6>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg me-3"
+              id="contactUsBtn"
+            >
+              Contact Us
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              id="bookAppointmentBtn"
+            >
+              Book an Appointment
+            </button>
+          </div>
+
+          <!-- Contact Form View -->
+          <form
+            id="heroContactForm"
+            class="d-none needs-validation"
+            action="https://formspree.io/f/mykkvdod"
+            method="POST"
+            novalidate
+          >
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="hero-name" class="form-label">Name</label>
+                  <input
+                    id="hero-name"
+                    name="name"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="hero-email" class="form-label">Email</label>
+                  <input
+                    id="hero-email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="hero-subject" class="form-label">Subject</label>
+                  <input
+                    id="hero-subject"
+                    name="subject"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="hero-message" class="form-label">Message</label>
+                  <textarea
+                    id="hero-message"
+                    name="message"
+                    class="form-control"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Please enter a message.</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="hero-consent"
+                      required
+                    />
+                    <label class="form-check-label" for="hero-consent"
+                      >I agree to have this website store my submitted
+                      information.</label
+                    >
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                id="heroSuccessMessage"
+                class="alert alert-success d-none me-auto mb-0"
+                role="alert"
+              >
+                Thank you! Your message has been sent successfully.
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="backToOptionsBtn"
+              >
+                Back
+              </button>
+              <button id="heroSubmitBtn" type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </div>
+          </form>
+
+          <!-- Appointment View -->
+          <div id="appointmentView" class="d-none">
+            <div class="modal-body text-center">
+              <p class="mb-4">
+                Use our online Google Calendar to book an appointment at your
+                convenience.
+              </p>
+              <a
+                href="https://calendar.app.google/pf3DxSBx9nP5u9VN6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary btn-lg"
+              >
+                Open Google Calendar
+              </a>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="backToOptionsBtn2"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="py-5">
+      <div class="container">
+        <!-- Image Placeholders -->
+        <section class="image-section mb-5">
+          <h2 class="mb-4 text-center">Featured Images</h2>
+          <div class="row g-4">
+            <!-- Image 1 -->
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://via.placeholder.com/400x300?text=Image+1"
+                  class="card-img-top"
+                  alt="Placeholder 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Image 1</h5>
+                  <p class="card-text">
+                    Replace this placeholder with your image
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://via.placeholder.com/400x300?text=Image+2"
+                  class="card-img-top"
+                  alt="Placeholder 2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Image 2</h5>
+                  <p class="card-text">
+                    Replace this placeholder with your image
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://via.placeholder.com/400x300?text=Image+3"
+                  class="card-img-top"
+                  alt="Placeholder 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Image 3</h5>
+                  <p class="card-text">
+                    Replace this placeholder with your image
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>

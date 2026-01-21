@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic Site #1 - Contact</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Basic Site #1</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Form -->
+    <main class="container py-5">
+      <h1 class="mb-4">Contact Us</h1>
+
+      <div class="row g-5">
+        <!-- Contact Form Column -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title mb-3">Send us a Message</h2>
+              <p class="card-text mb-4">
+                Fill out the form below and we'll get back to you as soon as
+                possible.
+              </p>
+
+              <form
+                id="contactForm"
+                class="needs-validation"
+                action="https://formspree.io/f/mykkvdod"
+                method="POST"
+                novalidate
+              >
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    rows="6"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Please enter a message.</div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="consent"
+                      required
+                    />
+                    <label class="form-check-label" for="consent"
+                      >I agree to have this website store my submitted
+                      information.</label
+                    >
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+
+                <button id="submitBtn" class="btn btn-primary" type="submit">
+                  Send Message
+                </button>
+                <div
+                  id="successMessage"
+                  class="alert alert-success d-none mt-3"
+                  role="alert"
+                >
+                  Thank you! Your message has been sent successfully.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book an Appointment Column -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div
+              class="card-body d-flex flex-column justify-content-center text-center"
+            >
+              <h2 class="card-title mb-3">Book an Appointment</h2>
+              <p class="card-text mb-4">
+                Prefer to schedule a time to meet? Use our online calendar to
+                book an appointment at your convenience.
+              </p>
+              <a
+                href="https://calendar.app.google/pf3DxSBx9nP5u9VN6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary btn-lg"
+              >
+                Open Google Calendar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/script.js"></script>
+  </body>
+</html>
