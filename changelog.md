@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated color palette from template to Southern Sole palette
+- Updated title across all pages
 
 ### Deprecated
 

@@ -1,4 +1,4 @@
-# BASIC SITE #1 - V0.0.0
+# SOUTHERN SOLE REFLEXOLOGY - V0.0.0
 
 This is a basic website template to offer clients. It consists of a homepage, "About" page, "Contact" page, and "FAQ" page. The site uses HTML, Bootstrap CSS, and JavaScript.
 
