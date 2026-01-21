@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Gravitas One", sans-serif;
+  font-family: "Sirivennela", sans-serif;
   font-weight: 400;
 }
 
@@ -48,7 +48,11 @@ a:focus {
 .navbar {
   background-color: var(--color-accent-2) !important;
 }
-.navbar .navbar-brand,
+.navbar .navbar-brand {
+  font-family: "Sirivennela", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-primary) !important;
+}
 .navbar .nav-link {
   color: var(--color-primary) !important;
 }

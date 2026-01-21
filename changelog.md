@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated color palette from template to Southern Sole palette
 - Updated title across all pages
+- Changed font of site title in nav bar
 
 ### Deprecated
 
