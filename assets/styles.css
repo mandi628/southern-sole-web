@@ -6,11 +6,11 @@ Accent-2: Very light gray (#cccccc) - for lighter accents and hover states */
 
 /* Universal Color Palette */
 :root {
-  --color-background: #ffffff;
-  --color-primary: #222222;
-  --color-secondary: #555555;
-  --color-accent-1: #888888;
-  --color-accent-2: #cccccc;
+  --color-background: #fdeedcff;
+  --color-primary: #000000ff;
+  --color-secondary: #786c5eff;
+  --color-accent-1: #c0846dff;
+  --color-accent-2: #b9c8c9ff;
 }
 
 /* Base */
