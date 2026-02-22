@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Therapist calendar links
   const therapistLinks = {
     Tammy: "https://calendar.app.google/5qSv1xJ9kTd3Mou16",
-    Aileen: "https://calendar.app.google/pf3DxSBx9nP5u9VN6", // Placeholder until link is provided
+    Aileen: "https://calendar.app.google/qYDQ3artEyNmAcZT7"
     Mandi: "https://calendar.app.google/eJnUmYkehdntmh447",
   };
 
