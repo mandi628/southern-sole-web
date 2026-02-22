@@ -220,15 +220,55 @@
             </div>
           </form>
 
-          <!-- Appointment View -->
+          <!-- Appointment View - Select Therapist -->
           <div id="appointmentView" class="d-none">
             <div class="modal-body text-center">
+              <h6 class="mb-4">Select a Therapist:</h6>
+              <div class="d-grid gap-3">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg therapist-btn"
+                  data-therapist="Tammy"
+                >
+                  Tammy
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg therapist-btn"
+                  data-therapist="Aileen"
+                >
+                  Aileen
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg therapist-btn"
+                  data-therapist="Mandi"
+                >
+                  Mandi
+                </button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="backToOptionsBtn2"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+
+          <!-- Calendar View - After Therapist Selection -->
+          <div id="calendarView" class="d-none">
+            <div class="modal-body text-center">
+              <p class="mb-2">Booking with <strong id="selectedTherapistName"></strong></p>
               <p class="mb-4">
                 Use our online Google Calendar to book an appointment at your
                 convenience.
               </p>
               <a
-                href="https://calendar.app.google/pf3DxSBx9nP5u9VN6"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-primary btn-lg"
@@ -240,7 +280,7 @@
               <button
                 type="button"
                 class="btn btn-secondary"
-                id="backToOptionsBtn2"
+                id="backToTherapistsBtn"
               >
                 Back
               </button>
