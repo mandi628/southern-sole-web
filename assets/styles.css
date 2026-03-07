@@ -61,7 +61,7 @@ a:focus {
   margin-left: 25px;
 }
 .navbar .navbar-brand img {
-  height: 250px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
 }
 .navbar .nav-link {
   color: var(--color-secondary) !important;
@@ -103,7 +103,7 @@ a:focus {
   border-radius: 200px 200px 0 0; /* Arch shape */
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(120, 108, 94, 0.15);
-  height: 500px;
+  height: 400px;
 }
 .hero-img-wrapper img {
   object-fit: cover;
@@ -156,6 +156,12 @@ a:focus {
 /* About Page - Employee Images */
 #employeeAccordion img {
   width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-content-img {
+  width: 80%;
   display: block;
   margin: 0 auto;
 }
