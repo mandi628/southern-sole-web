@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Therapist calendar links
   const therapistLinks = {
     Tammy: "https://calendar.app.google/5qSv1xJ9kTd3Mou16",
-    Aileen: "https://calendar.app.google/qYDQ3artEyNmAcZT7"
+    Aileen: "https://calendar.app.google/qYDQ3artEyNmAcZT7",
     Mandi: "https://calendar.app.google/eJnUmYkehdntmh447",
   };
 
@@ -102,15 +102,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const therapist = btn.getAttribute("data-therapist");
         console.log("Selected therapist:", therapist);
         selectedTherapistName.textContent = therapist;
-        
+
         // Update calendar link based on selected therapist
         const calendarLink = document.querySelector(
-          "#calendarView a[target='_blank']"
+          "#calendarView a[target='_blank']",
         );
         if (calendarLink && therapistLinks[therapist]) {
           calendarLink.href = therapistLinks[therapist];
         }
-        
+
         appointmentView.classList.add("d-none");
         calendarView.classList.remove("d-none");
       });
