@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Therapist calendar links
+  const therapistLinks = {
+    Tammy: "https://calendar.app.google/5qSv1xJ9kTd3Mou16",
+    Aileen: "https://calendar.app.google/qYDQ3artEyNmAcZT7",
+    Mandi: "https://calendar.app.google/eJnUmYkehdntmh447",
+  };
+
   // Contact page form validation
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
@@ -46,13 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("contactUsBtn:", contactUsBtn);
   console.log("bookAppointmentBtn:", bookAppointmentBtn);
-
-  // Therapist calendar links
-  const therapistLinks = {
-    Tammy: "https://calendar.app.google/5qSv1xJ9kTd3Mou16",
-    Aileen: "https://calendar.app.google/qYDQ3artEyNmAcZT7",
-    Mandi: "https://calendar.app.google/eJnUmYkehdntmh447",
-  };
 
   if (contactUsBtn && bookAppointmentBtn && heroForm && heroModalEl) {
     // Show Contact Form
@@ -181,5 +181,48 @@ document.addEventListener("DOMContentLoaded", function () {
       heroForm,
       heroModalEl,
     });
+  }
+
+  // Contact page appointment logic
+  const contactAppointmentView = document.getElementById(
+    "contactAppointmentView",
+  );
+  if (contactAppointmentView) {
+    const contactCalendarView = document.getElementById("contactCalendarView");
+    const contactTherapistBtns =
+      contactAppointmentView.querySelectorAll(".therapist-btn");
+    const contactSelectedTherapistName = document.getElementById(
+      "contactSelectedTherapistName",
+    );
+    const contactBackToTherapistsBtn = document.getElementById(
+      "contactBackToTherapistsBtn",
+    );
+
+    // Therapist selection
+    contactTherapistBtns.forEach((btn) => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const therapist = btn.getAttribute("data-therapist");
+        contactSelectedTherapistName.textContent = therapist;
+
+        // Update calendar link
+        const calendarLink = contactCalendarView.querySelector("a");
+        if (calendarLink && therapistLinks[therapist]) {
+          calendarLink.href = therapistLinks[therapist];
+        }
+
+        contactAppointmentView.classList.add("d-none");
+        contactCalendarView.classList.remove("d-none");
+      });
+    });
+
+    // Back to Therapists
+    if (contactBackToTherapistsBtn) {
+      contactBackToTherapistsBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        contactAppointmentView.classList.remove("d-none");
+        contactCalendarView.classList.add("d-none");
+      });
+    }
   }
 });
